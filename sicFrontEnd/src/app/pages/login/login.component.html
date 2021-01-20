@@ -1,0 +1,52 @@
+<div class="container">
+    
+    <div style="text-align:center">
+      <div class="p-3 mb-2  rcorners1 text-white">
+            <h3>
+              ! BIENVENIDO !
+            </h3>
+            <h4>
+              El SISTEMA DE GESTIÓN DE FORMULARIOS
+            </h4>
+      </div>
+      <br>
+     </div>
+        
+        
+        <div class="justify-content-center">
+            
+                    
+                   <h4 class= "titulo-verdoso w3-center">INICIO DE SESIÓN </h4>
+                   <div class="w3-center" >
+                       
+                      </div>
+                  
+                     
+                     <div class="container">
+                   
+                         <form [formGroup]="signInForm" (ngSubmit)="doLogin()"   novalidate>
+                         <div class="form-group">
+                           <label class="tituloTabla-verdoso" for="description"><i class="material-icons">account_circle</i> Nombre de Usuario </label>
+                           <input type="text" class="form-control" id="description" formControlName="username" required>
+                         </div>
+                         <br>
+                         <div class="form-group">
+                           <label class="tituloTabla-verdoso"  for="priority"><i class="material-icons">lock</i>Contraseña</label>
+                           <input type="password" class="form-control" id="alterEgo" formControlName="password">
+                         </div>
+                         <br>
+                         <div class="row">
+                            <button type="submit" class="btn btn-success" [disabled]="!signInForm.valid">Iniciar Sesión</button>
+                            
+                         </div>
+                         <p  *ngIf="mensajeError">{{mensajeError}}</p>
+                        
+                     
+                       </form>
+                    </div>
+                
+        </div>
+        
+    
+     
+      </div>
